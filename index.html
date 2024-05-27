@@ -8,7 +8,7 @@
     <link href="./assets/css/vazir.css" rel="stylesheet" />
     <link href="./assets/css/style.css" rel="stylesheet" />
     <style>
-        #copyButton1, #output1, #output2, #copyButton2 {
+        #copyButton1, #output1, #output2, #copyButton2, #output3, #copyButton3, #output4, #copyButton4 {
             display: none;
         }
         html, body {
@@ -45,13 +45,37 @@
             <input type="text" id="inputUrl" style="font: 14px vazir; direction: rtl;" class="form-control mb-3" placeholder="کانفیگ را وارد کنید">
             <button onclick="generateConfigs()" class="btn btn-primary mb-3" style="font: 14px vazir;">دریافت اکانت جایگزین</button>
             <textarea id="output1" class="form-control mb-3" rows="5"></textarea>
-            <div id="message" class="message" style="font: 16px vazir; direction: rtl;" ></div>
+            <textarea id="output2" class="form-control mb-3" rows="5"></textarea>
+            <textarea id="output3" class="form-control mb-3" rows="5"></textarea>
+            <textarea id="output4" class="form-control mb-3" rows="5"></textarea>
+            <div id="message" class="message" style="font: 16px vazir; direction: rtl;"></div>
             <button id="copyButton1" onclick="copyToClipboard('output1', 'اکانت جایگزین در حافظه کپی شد. در برنامه روی علامت + کلیک کرده و اکانت را وارد کنید. اکانت به صورت خودکار اضافه می شود.')" class="btn btn-success mb-3" style="font: 14px vazir;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
                     <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
                     <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
                 </svg>
-                کپی اکانت جدید
+                کپی اکانت جدید 1
+            </button>
+            <button id="copyButton2" onclick="copyToClipboard('output2', 'اکانت جایگزین در حافظه کپی شد. در برنامه روی علامت + کلیک کرده و اکانت را وارد کنید. اکانت به صورت خودکار اضافه می شود.')" class="btn btn-success mb-3" style="font: 14px vazir;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
+                </svg>
+                کپی اکانت جدید 2
+            </button>
+            <button id="copyButton3" onclick="copyToClipboard('output3', 'اکانت جایگزین در حافظه کپی شد. در برنامه روی علامت + کلیک کرده و اکانت را وارد کنید. اکانت به صورت خودکار اضافه می شود.')" class="btn btn-success mb-3" style="font: 14px vazir;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
+                </svg>
+                کپی اکانت جدید 3
+            </button>
+            <button id="copyButton4" onclick="copyToClipboard('output4', 'اکانت جایگزین در حافظه کپی شد. در برنامه روی علامت + کلیک کرده و اکانت را وارد کنید. اکانت به صورت خودکار اضافه می شود.')" class="btn btn-success mb-3" style="font: 14px vazir;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
+                </svg>
+                کپی اکانت جدید 4
             </button>
         </div>
     </div>
@@ -63,7 +87,7 @@
         const searchParams = new URLSearchParams(url.search);
 
         const id = inputUrl.split('://')[1].split('@')[0];
-        const address = "188.121.121.14";
+        const addresses = ["188.121.121.14", "185.220.227.64", "85.198.15.46", "94.182.169.251"];
         const port = 8443;
         const remarks = inputUrl.split('#')[1];
         
@@ -76,181 +100,15 @@
         const fp = "randomized";
         const alpn = "h2%2Chttp%2F1.1";
 
-        const config = `vless://${id}@${address}:${port}?type=${type}&security=${security}&path=${encodeURIComponent(path)}&fp=${fp}&alpn=${alpn}&host=${host}&sni=${sni}#${remarks}`;
+        const outputs = [document.getElementById('output1'), document.getElementById('output2'), document.getElementById('output3'), document.getElementById('output4')];
+        const buttons = [document.getElementById('copyButton1'), document.getElementById('copyButton2'), document.getElementById('copyButton3'), document.getElementById('copyButton4')];
 
-        document.getElementById('output1').value = config;
-        document.getElementById('output1').style.display = 'block';
-        document.getElementById('copyButton1').style.display = 'inline-block';
-
-        generateConfigs2(config);
-    }
-
-    function generateConfigs2(inputConfig) {
-        const url = new URL(inputConfig);
-        const searchParams = new URLSearchParams(url.search);
-        const id = inputConfig.split('://')[1].split('@')[0];
-        const address = inputConfig.split('@')[1].split(':')[0];
-        const port = parseInt(inputConfig.split('@')[1].split(':')[1].split('?')[0]);
-        const remarks = inputConfig.split('#')[1];
-
-        const tlsConfig = {
-            remarks: remarks, 
-            log: {
-                access: "",
-                error: "",
-                loglevel: "warning"
-            },
-            dns: {
-                tag: "dns",
-                hosts: {
-                    "telegram.org": ["149.154.167.92", "149.154.167.255"]
-                },
-                servers: [
-                    "https://cloudflare-dns.com/dns-query",
-                    "https://94.140.14.140/dns-query", "https://94.140.14.141/dns-query"
-                ]
-            },
-                    inbounds: [
-    {
-      domainOverride: [
-        "http",
-        "tls"
-      ],
-      protocol: "socks",
-      tag: "socks-in",
-      listen: "127.0.0.1",
-      port: 10808,
-      settings: {
-        auth: "noauth",
-        udp: true,
-      },
-      sniffing: {
-        enabled: true,
-        destOverride: [
-          "http",
-          "tls"
-        ]
-      }
-    },
-    {
-      protocol: "http",
-      tag: "http-in",
-      listen: "127.0.0.1",
-      port: 10809,
-      sniffing: {
-        enabled: true,
-        destOverride: [
-          "http",
-          "tls"
-        ]
-      }
-    }
-  ],
-            outbounds: [
-                {
-                    tag: "proxy",
-                    protocol: "vless",
-                    settings: {
-                        vnext: [
-                            {
-                                address: address,
-                                port: port,
-                                users: [
-                                    {
-                                        id: id,
-                                        alterId: 0,
-                                        email: "t@t.tt",
-                                        security: "auto",
-                                        encryption: "none",
-                                        flow: "" 
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    streamSettings: { 
-                        network: searchParams.get("type"),
-                        security: searchParams.get("security"),
-                        tlsSettings: { 
-                            allowInsecure: true,
-                            serverName: searchParams.get("sni"),
-                            alpn: [searchParams.get("alpn")],
-                            fingerprint: "firefox",
-                            show: false
-                        },
-                        wsSettings: { 
-                            path: searchParams.get("path"), 
-                            headers: {
-                                Host: searchParams.get("host"),
-                                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0"
-                            }
-                        },
-                        sockopt: {
-                            dialerProxy: "fragment",
-                            tcpKeepAliveIdle: 100,
-                            mark: 255,
-                            tcpNoDelay: true
-                        } 
-                    }, 
-                    mux: {
-                        enabled: true, concurrency: 8, xudpConcurrency: 8,
-                        xudpProxyUDP443: "reject" 
-                    } 
-                },
-                { 
-                    tag: "fragment", 
-                    protocol: "freedom", 
-                    settings: { 
-                        domainStrategy: "AsIs",
-                        fragment: { 
-                            packets: "tlshello", length: "5-9", interval: "10-15" 
-                        }
-                    } 
-                },
-                {
-                    protocol: "freedom",
-                    settings: {
-                        domainStrategy: "UseIP"
-                    },
-                    tag: "direct"
-                },
-                { 
-                    tag: "block", protocol: "blackhole", settings: { response: { type: "http" } } 
-                } 
-            ],  
-            routing: {
-                domainStrategy: "AsIs",
-                rules: [
-                    {
-                        type: "field",
-                        inboundTag: ["api"],
-                        outboundTag: "api"
-                    },
-                    {
-                        type: "field",
-                        outboundTag: "direct",
-                        domain: ["domain:ir", "geosite:cn"],
-                        enabled: true
-                    },
-                    {
-                        type: "field",
-                        outboundTag: "direct",
-                        ip: ["geoip:private", "geoip:ir"],
-                        enabled: true
-                    },
-                    {
-                        type: "field",
-                        port: "0-65535",
-                        outboundTag: "proxy",
-                        enabled: true
-                    }
-                ]
-            }
-        };
-
-        document.getElementById('output2').value = JSON.stringify(tlsConfig);
-        document.getElementById('output2').style.display = 'block';
-        document.getElementById('copyButton2').style.display = 'inline-block';
+        addresses.forEach((address, index) => {
+            const config = `vless://${id}@${address}:${port}?type=${type}&security=${security}&path=${encodeURIComponent(path)}&fp=${fp}&alpn=${alpn}&host=${host}&sni=${sni}#${remarks}`;
+            outputs[index].value = config;
+            outputs[index].style.display = 'block';
+            buttons[index].style.display = 'inline-block';
+        });
     }
 
     function copyToClipboard(elementId, message) {
